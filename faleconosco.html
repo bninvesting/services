@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BN Investing - Contato e atendimento personalizado.">
+    <title>Fale Conosco - BN Investing</title>
+    <style>
+        :root {
+            --bg: #030303;
+            --bg-soft: #0e0e0f;
+            --panel: rgba(17, 17, 17, 0.92);
+            --text: #f5f5f5;
+            --muted: #d5d5d5;
+            --primary: #ff7a00;
+            --primary-2: #ffb15c;
+            --line: rgba(255,255,255,0.08);
+            --shadow: 0 18px 40px rgba(0,0,0,0.42);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(255, 122, 0, 0.18), transparent 26%),
+                radial-gradient(circle at bottom right, rgba(255, 177, 92, 0.10), transparent 26%),
+                linear-gradient(135deg, #030303 0%, #0a0a0a 100%);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .container {
+            width: min(1100px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 1px solid var(--line);
+            background: rgba(7, 7, 7, 0.82);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 18px 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 1.05rem;
+        }
+
+        .brand img {
+            width: 62px;
+            height: auto;
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 12px;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--muted);
+            padding: 10px 14px;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            transition: 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #fff;
+            background: rgba(255,255,255,0.04);
+            border-color: var(--line);
+        }
+
+        main {
+            padding: 48px 0 70px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 24px;
+            align-items: center;
+            margin-bottom: 28px;
+        }
+
+        .hero-copy,
+        .panel,
+        .form-box {
+            background: rgba(17, 17, 17, 0.9);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-copy {
+            padding: 28px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(255, 122, 0, 0.10);
+            border: 1px solid rgba(255, 122, 0, 0.28);
+            color: #ffd9b1;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 18px 0 14px;
+            font-size: clamp(2.4rem, 5vw, 4.2rem);
+            line-height: 0.98;
+            letter-spacing: -0.06em;
+        }
+
+        .hero-copy p,
+        .panel p,
+        .info-list li {
+            color: var(--muted);
+        }
+
+        .panel {
+            padding: 28px;
+        }
+
+        .panel h2,
+        .form-box h2 {
+            margin-top: 0;
+            margin-bottom: 14px;
+            font-size: 1.7rem;
+            color: #fff;
+        }
+
+        .info-list {
+            margin: 18px 0 0;
+            padding-left: 18px;
+        }
+
+        .form-box {
+            padding: 32px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        label {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            border: 1px solid var(--line);
+            background: rgba(255,255,255,0.02);
+            border-radius: 12px;
+            padding: 14px 16px;
+            color: var(--text);
+            font: inherit;
+        }
+
+        textarea {
+            min-height: 170px;
+            resize: vertical;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: rgba(255, 122, 0, 0.8);
+            box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.15);
+        }
+
+        .submit-btn,
+        .primary-btn {
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-2));
+            color: #111;
+            font-weight: 800;
+            padding: 15px 18px;
+            cursor: pointer;
+            box-shadow: 0 18px 26px rgba(255, 122, 0, 0.22);
+            transition: transform 0.2s ease;
+        }
+
+        .submit-btn:hover,
+        .primary-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        footer {
+            border-top: 1px solid var(--line);
+            padding: 28px 0 40px;
+            color: var(--muted);
+            background: rgba(8, 8, 8, 0.7);
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        @media (max-width: 800px) {
+            .hero,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .topbar,
+            .footer-grid {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container topbar">
+            <div class="brand">
+                <img src="Imagens/logo.png" alt="Logo BN Investing">
+                <span>BN Investing</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Página inicial</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="faleconosco.html">Fale Conosco</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-copy">
+                <span class="eyebrow">Atendimento</span>
+                <h1>Fale com a BN Investing</h1>
+                <p>Entre em contato para transformar sua presença digital em um diferencial real no mercado.</p>
+            </div>
+
+            <div class="panel">
+                <h2>Como funciona</h2>
+                <p>Nosso time acompanha sua empresa desde a estratégia até a execução para criar mensagens, posicionamento e experiências mais fortes.</p>
+                <ul class="info-list">
+                    <li>Você nos conta o seu objetivo.</li>
+                    <li>Definimos uma estratégia clara.</li>
+                    <li>Executamos com foco em resultados.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="form-box">
+            <h2>Enviar mensagem</h2>
+            <form action="mailto:bninvesting1@gmail.com" method="post" enctype="text/plain">
+                <div>
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required autocomplete="name">
+                </div>
+
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required autocomplete="email">
+                </div>
+
+                <div>
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" required>Eu gostaria de saber mais sobre seus serviços.</textarea>
+                </div>
+
+                <button class="submit-btn" type="submit">Enviar mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <strong>© 2026 BN Investing</strong>
+            </div>
+            <div>
+                <span>Telefone: +55 11 94727-7673</span>
+                <span style="margin-left: 18px;">E-mail: bninvesting1@gmail.com</span>
+            </div>
+            <button class="primary-btn" onclick="window.location.href='index.html'">Página inicial</button>
+        </div>
+    </footer>
+</body>
+</html>
